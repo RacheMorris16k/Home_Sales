@@ -68,11 +68,13 @@ Set up environment variables in your notebook:
 import os
 
 os.environ["JAVA_HOME"] = r"C:\Program Files\Java\jdk-11"
+
 os.environ["HADOOP_HOME"] = r"C:\spark-3.5.5-bin-hadoop3"
+
 os.environ["PATH"] += os.pathsep + r"C:\spark-3.5.5-bin-hadoop3\bin"
 
-### Initialize findspark and create a session:
-# Import packages
+# Initialize findspark and create a session:
+### Import packages
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import avg, round
 import time
@@ -81,7 +83,7 @@ try:
     spark.stop()
 except:
     pass
-# Create a SparkSession
+### Create a SparkSession
 spark = SparkSession.builder.appName("SparkSQL").getOrCreate()
 #Show SparkSession
 spark
@@ -108,4 +110,5 @@ Controlled Folder Access: Disable it in Windows Security (under Ransomware Prote
 
 Empty Output Folder: Ensure the path exists and no .parquet() error occurred.
 
-
+-Rache Morris
+-21/05/2025
